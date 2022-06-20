@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+hr {
+    width: 50%;
+    height: .5vh;
+    background-color: black;
+}
+
+
+
+#board {
+    height: 750px;
+    width: 750px;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+
+    align-items: center;
+}
+
+.tile {
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.horizontal-line {
+    border-bottom: 3px solid black;
+}
+
+.vertical-line {
+    border-right: 3px solid black;
+}
+
+
+.winner-X,
+.winner-O {
+    color: red;
+}
+
+.winner-X {
+    background-color: #94a3b8;
+}
+
+
+.winner-O {
+    background-color: #34d399;
+}
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: red;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.visible {
+    display: grid;
+    transition: display 2s linear;
+}
+
+.hidden {
+    display: none;
+    transition: display 3s linear;
+}
+
+#reset {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+
+}
+
+#reset:hover {
+    cursor: pointer;
+    color: green;
+}
+
+#main-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+
+.title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+
+#start-game {
+    cursor: pointer;
+
+}
+
+#start-game:hover {
+    color: green;
+}
+
+#reset,
+#start-game,
+.welcome-page {
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+.player-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    width: 500px;
+}
+
+.player-name {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
