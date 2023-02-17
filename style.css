@@ -17,19 +17,17 @@ hr {
 
 
 #board {
-    height: 750px;
-    width: 750px;
+    min-height: 120vh;
+    width: 80%;
     display: none;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
 
-    align-items: center;
 }
 
 .tile {
-    height: 250px;
-    width: 250px;
+
     cursor: pointer;
     box-sizing: border-box;
     font-size: 10rem;
@@ -106,7 +104,7 @@ hr {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    width: 100%;
+    margin-bottom: 2em;
 
 }
 
@@ -146,4 +144,15 @@ hr {
     display: flex;
     flex-flow: column;
     gap: 20px;
+}
+
+@media (max-width:1000px) {
+    .tile {
+        font-size: 5rem;
+    }
+
+    #reset {
+        top: 50%;
+        left: 30%;
+    }
 }
